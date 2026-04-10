@@ -113,6 +113,75 @@ This skill automatically triggers when you mention:
 
 See [LICENSE](LICENSE) - Apache 2.0
 
+## Contributing
+
+We welcome contributions! Please follow this workflow:
+
+### 1. Fork the Repository
+
+Click the "Fork" button on https://github.com/alexlib/openpiv-skill
+
+### 2. Clone Your Fork
+
+```bash
+git clone https://github.com/YOUR_USERNAME/openpiv-skill.git
+cd openpiv-skill
+```
+
+### 3. Create a Feature Branch
+
+```bash
+git checkout -b feature/your-feature-name
+```
+
+### 4. Make Your Changes
+
+Edit the relevant files:
+- `SKILL.md` - Skill documentation
+- `scripts/` - Code (runner.py, analyze.py)
+- `tests/` - Test cases
+- `references/` - Additional docs
+
+### 5. Test Your Changes
+
+Run the test suite:
+```bash
+uv pip install -e .
+uv run pytest tests/ -v
+```
+
+Test the CLI manually:
+```bash
+openpiv-process --image tutorials/sample_data/exp1_001_a.bmp --image tutorials/sample_data/exp1_001_b.bmp --output_dir test_output
+```
+
+### 6. Commit Your Changes
+
+```bash
+git add .
+git commit -m "Add: description of your changes"
+```
+
+### 7. Push to Your Fork
+
+```bash
+git push origin feature/your-feature-name
+```
+
+### 8. Create a Pull Request
+
+1. Go to https://github.com/alexlib/openpiv-skill
+2. Click "Compare & pull request"
+3. Describe your changes
+4. Submit
+
+### Contribution Guidelines
+
+- Follow existing code style
+- Add tests for new features
+- Update documentation
+- Be responsive to review feedback
+
 ## Resources
 
 - [OpenPIV Python](https://github.com/openpiv/openpiv-python)
